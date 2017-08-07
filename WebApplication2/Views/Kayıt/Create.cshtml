@@ -1,0 +1,146 @@
+﻿@model WebApplication2.Models.TBLUYE
+
+@{
+    Layout = null;
+}
+@{Session.Abandon(); }
+<!-- Favicon -->
+<link rel="shortcut icon" href="../images/favicon.ico" />
+
+<!-- bootstrap -->
+<link href="~/Content/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+<!-- google font -->
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,300italic,400italic,600italic,700,700italic,800,800italic' rel='stylesheet' type="text/css" />
+<link href='https://fonts.googleapis.com/css?family=Raleway:400,100,100italic,200italic,200,300,300italic,400italic,500,500italic,600,600italic,700italic,900italic,900,800,700,800italic' rel='stylesheet' type="text/css" />
+
+<!-- themify icon -->
+<link href="~/Content/css/themify-icons.css" rel="stylesheet" type="text/css" />
+
+<!-- font awesome  -->
+<link href="~/Content/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+
+<!-- magnific popup -->
+<link href="~/Content/css/magnific-popup.css" rel="stylesheet" type="text/css" />
+
+<!-- jquery ui -->
+<link rel='stylesheet' href="~/Content/css/jquery-ui.css">
+
+<!-- main style -->
+<link href="~/Content/css/style.css" rel="stylesheet" type="text/css" />
+
+<!-- responsive -->
+<link href="~/Content/css/responsive.css" rel="stylesheet" type="text/css" />
+
+
+<title>KAYIT OL</title>
+
+<div class="menu-responsive"><a href="#"> <b>sam martin</b></a> <a id="menu-icon" class="but" href="#"><span class="ti-menu"></span> </a></div>
+<header id="left-header" class="header">
+    <nav id="menu" class="navbar navbar-default">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#"> <img id="logo_imgg" src="../images/logo.png" alt=""> </a>
+        </div>
+
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul id="navbar" class="nav navbar-nav">
+                <li class="active"><a href="#home" class="page-scroll">RANDEVU AL</a></li>
+                <li><a href="../Uye/Login">GİRİŞ YAP</a></li>
+                <li><a>@Html.ActionLink("ANASAYFAYA DÖN", "../Home/HomePage")</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="menu-footer">
+        <div class="social">
+            <ul>
+                <li><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="https://twitter.com/"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="https://tr.linkedin.com/"><i class="fa fa-linkedin"></i> </a></li>
+            </ul>
+        </div>
+        <div class="copyright">
+            <p>© BAR-BER </p>
+        </div>
+    </div>
+</header>
+
+
+<center><h2 style="color:black; padding-left:210px;">KAYIT OL</h2></center>
+
+
+@using (Html.BeginForm("Create", "Kayıt", FormMethod.Post, new { encytype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal" style="width:100%;">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.AD, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.AD, new { htmlAttributes = new { @class = "form-control", placeholder = "AD", @required = "" } })
+                @Html.ValidationMessageFor(model => model.AD, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.SOYAD, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.SOYAD, new { htmlAttributes = new { @class = "form-control", placeholder = "SOYAD", @required = "" } })
+                @Html.ValidationMessageFor(model => model.SOYAD, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.NUMARA, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.NUMARA, new { htmlAttributes = new { @class = "form-control", placeholder = "NUMARA", @required = "", @type = "tel" } })
+                @Html.ValidationMessageFor(model => model.NUMARA, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.EMAIL, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.EMAIL, new { htmlAttributes = new { @class = "form-control", placeholder = "MAİL", @required = "", @type = "email" } })
+                @Html.ValidationMessageFor(model => model.EMAIL, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.SIFRE, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.SIFRE, new { htmlAttributes = new { @class = "form-control", placeholder = "ŞİFRE", @required = ""} })
+                @Html.ValidationMessageFor(model => model.SIFRE, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="KAYIT OL" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("ANASAYFAYA DÖN", "../Home/HomePage")
+    <p>HESABIN VAR MI ?</p>
+    @Html.ActionLink("GİRİŞ YAP", "../Uye/Login")
+</div>
+
+<script type="text/javascript" src="~/Content/js/jquery.min.js"></script>
+
+<!-- modernizr -->
+<script type="text/javascript" src="~/Content/js/modernizr.min.js"></script>
+
+<!-- Plugins -->
+<script type="text/javascript" src="~/Content/js/plugins.js"></script>
+
+<!-- datepicker -->
+<script type="text/javascript" src="~/Content/js/datepicker-script.js"></script>
+
+<script src="~/Scripts/bootstrap.min.js"></script>
+
+<!-- custom -->
+<script type="text/javascript" src="~/Content/js/custom.js"></script>

@@ -1,0 +1,51 @@
+﻿@model WebApplication2.Models.TBLRANDEVU
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TBLRANDEVU</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TBLKUAFOR.KUAFORAD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TBLKUAFOR.KUAFORAD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TBLRANDEVUSAAT.RANDEVUSAATLERI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TBLRANDEVUSAAT.RANDEVUSAATLERI)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TBLUYE.AD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TBLUYE.AD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RANDEVUTARIH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RANDEVUTARIH)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.RANDEVUID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,60 @@
+﻿@model IEnumerable<WebApplication2.Models.TBLKUAFOR>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<title>KUAFÖRLER</title>
+
+<h2>KUAFÖRLER</h2>
+
+<p>
+    @Html.ActionLink("KUAFÖR OLUŞTUR", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.KUAFORAD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KUAFORSOYAD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KUAFORYAS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KUAFORNUMARA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KUAFOREMAİL)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.KUAFORAD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KUAFORSOYAD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KUAFORYAS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KUAFORNUMARA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KUAFOREMAİL)
+        </td>
+        <td>
+            @Html.ActionLink("DÜZENLE", "Edit", new { id=item.KUAFORID }) |
+            @Html.ActionLink("DETAY", "Details", new { id=item.KUAFORID }) |
+            @Html.ActionLink("SİL", "Delete", new { id=item.KUAFORID })
+        </td>
+    </tr>
+}
+
+</table>

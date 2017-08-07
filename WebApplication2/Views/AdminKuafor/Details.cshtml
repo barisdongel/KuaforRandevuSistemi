@@ -1,0 +1,60 @@
+﻿@model WebApplication2.Models.TBLKUAFOR
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<title>KUAFÖRE DETAYLARI</title>
+
+<h2>DETAY</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.KUAFORAD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KUAFORAD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KUAFORSOYAD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KUAFORSOYAD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KUAFORYAS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KUAFORYAS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KUAFORNUMARA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KUAFORNUMARA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KUAFOREMAİL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KUAFOREMAİL)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("DÜZENLE", "Edit", new { id = Model.KUAFORID }) |
+    @Html.ActionLink("GERİ DÖN", "Index")
+</p>

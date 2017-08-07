@@ -1,0 +1,54 @@
+﻿@model IEnumerable<WebApplication2.Models.TBLRANDEVU>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<title>RANDEVULAR</title>
+
+<h2>RANDEVULAR</h2>
+
+<p>
+    @Html.ActionLink("RANDEVU OLUŞTUR", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TBLKUAFOR.KUAFORAD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TBLRANDEVUSAAT.RANDEVUSAATLERI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TBLUYE.AD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RANDEVUTARIH)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TBLKUAFOR.KUAFORAD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TBLRANDEVUSAAT.RANDEVUSAATLERI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TBLUYE.AD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RANDEVUTARIH)
+        </td>
+        <td>
+            @Html.ActionLink("DÜZENLE", "Edit", new { id=item.RANDEVUID }) |
+            @Html.ActionLink("DETAY", "Details", new { id=item.RANDEVUID }) |
+            @Html.ActionLink("SİL", "Delete", new { id=item.RANDEVUID })
+        </td>
+    </tr>
+}
+
+</table>

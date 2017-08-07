@@ -1,0 +1,66 @@
+﻿@model WebApplication2.Models.TBLUYE
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>DETAYLAR</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TBLYETKI.YETKIAD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TBLYETKI.YETKIAD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SOYAD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SOYAD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NUMARA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NUMARA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EMAIL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EMAIL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SIFRE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SIFRE)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("DÜZENLE", "Edit", new { id = Model.UYEID }) |
+    @Html.ActionLink("GERİ DÖN", "Index")
+</p>

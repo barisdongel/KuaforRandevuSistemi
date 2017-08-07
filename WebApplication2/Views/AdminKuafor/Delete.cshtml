@@ -1,0 +1,66 @@
+﻿@model WebApplication2.Models.TBLKUAFOR
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<title>KUAFÖR KALDIR</title>
+
+<h2>SİL</h2>
+
+<h3>EMİN MİSİN?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.KUAFORAD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KUAFORAD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KUAFORSOYAD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KUAFORSOYAD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KUAFORYAS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KUAFORYAS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KUAFORNUMARA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KUAFORNUMARA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KUAFOREMAİL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KUAFOREMAİL)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="SİL" class="btn btn-default" /> |
+            @Html.ActionLink("GERİ DÖN", "Index")
+        </div>
+    }
+</div>

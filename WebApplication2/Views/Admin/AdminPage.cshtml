@@ -1,0 +1,53 @@
+﻿@{
+    ViewBag.Title = "AdminPage";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<style type="text/css">
+    .admın{
+        color:aliceblue;
+    }
+
+    label {
+        background-color:#f5f5f5;
+        text-align:center;
+    }
+
+    .admın label a{
+        color:#777;
+        text-align:center;
+        font-weight:bold;
+        font-family:Arial, Helvetica, sans-serif;
+        font-size:12pt;
+        text-decoration:none;
+        padding:50px;
+    }
+</style>
+
+<title>ADMİN PANELİ</title>
+
+<div class="container-fluid">
+    <!-- Page Heading -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">
+                ADMİN ÖZET <small>Üyeler</small>
+            </h1>
+            <ol class="breadcrumb">
+                <li class="active">
+                    <i class="fa fa-dashboard"></i> ADMİN ÖZET
+                </li>
+            </ol>
+        </div>
+    </div>
+    <!-- /.row -->
+    <div class="admın">
+            <label>
+                <a title="Scroll Down" href="../AdminRandevu/Index">RANDEVULAR</a>
+                <a title="Scroll Down" href="../AdminUye/Index">ÜYELER</a>
+                <a title="Scroll Down" href="../AdminKuafor/Index">KUAFÖRLER</a>
+            </label>
+    </div>
+
+    <!-- /.row -->
+</div>

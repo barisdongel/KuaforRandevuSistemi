@@ -1,0 +1,72 @@
+﻿@model WebApplication2.Models.TBLUYE
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>ÜYE SİL</h2>
+
+<h3>Emin misin?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TBLYETKI.YETKIAD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TBLYETKI.YETKIAD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SOYAD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SOYAD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NUMARA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NUMARA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EMAIL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EMAIL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SIFRE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SIFRE)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="SİL" class="btn btn-default" /> |
+            @Html.ActionLink("GERİ DÖN", "Index")
+        </div>
+    }
+</div>
