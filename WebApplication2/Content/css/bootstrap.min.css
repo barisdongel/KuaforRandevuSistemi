@@ -1394,13 +1394,6 @@ img {
     height: auto
 }
 
-a:hover .img-responsive {
-	margin-top: 150px;
-	margin-left: 250px;
-	width: 300px;
-	height: auto;
-}
-
 .img-rounded {
     border-radius: 6px
 }

@@ -105,15 +105,13 @@
     <Content Include="Content\css\datepicker3.min.css" />
     <Content Include="Content\css\font-awesome.min.css" />
     <Content Include="Content\css\jquery-ui.css" />
+    <Content Include="Content\css\lightbox.css" />
     <Content Include="Content\css\magnific-popup.css" />
     <Content Include="Content\css\owl.carousel.css" />
-    <Content Include="Content\css\owl.video.play.html" />
-    <Content Include="Content\css\resim.css" />
     <Content Include="Content\css\responsive.css" />
     <Content Include="Content\css\sb-admin-rtl.css" />
     <Content Include="Content\css\sb-admin.css" />
     <Content Include="Content\css\style.css" />
-    <Content Include="Content\css\Styles.css" />
     <Content Include="Content\css\themify-icons.css" />
     <Content Include="Content\fonts\fontawesome-webfont3295.html" />
     <Content Include="Content\fonts\fontawesome-webfont3295.svg" />
@@ -137,6 +135,10 @@
     <Content Include="Content\js\modernizr.min.js" />
     <Content Include="Content\js\plugins.js" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\img\close.png" />
+    <Content Include="Content\img\loading.gif" />
+    <Content Include="Content\img\next.png" />
+    <Content Include="Content\img\prev.png" />
     <Content Include="Global.asax" />
     <Content Include="images\ajax-loader-white.gif" />
     <Content Include="images\arrow-left.png" />
@@ -183,25 +185,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="Scripts\Chart.bundle.js" />
-    <Content Include="Scripts\Chart.bundle.min.js" />
-    <Content Include="Scripts\Chart.js" />
-    <Content Include="Scripts\Chart.min.js" />
-    <Content Include="Scripts\dataTables.bootstrap4.js" />
-    <Content Include="Scripts\jquery-1.10.2.js" />
-    <Content Include="Scripts\jquery-1.10.2.min.js" />
-    <Content Include="Scripts\jquery.dataTables.js" />
-    <Content Include="Scripts\jquery.easing.compatibility.js" />
-    <Content Include="Scripts\jquery.easing.js" />
     <Content Include="Scripts\jquery.easing.min.js" />
-    <Content Include="Scripts\jquery.js" />
-    <Content Include="Scripts\jquery.min.js" />
-    <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Scripts\sb-admin.js" />
-    <Content Include="Scripts\sb-admin.min.js" />
-    <Content Include="Scripts\tether.js" />
-    <Content Include="Scripts\tether.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -232,7 +216,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\HomePage.cshtml" />
-    <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Uye\Login.cshtml" />
     <Content Include="Views\Kayıt\Create.cshtml" />
     <Content Include="Views\Shared\_LayoutAdmin.cshtml" />
@@ -263,7 +246,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\images\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

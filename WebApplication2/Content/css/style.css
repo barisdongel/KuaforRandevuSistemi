@@ -58,6 +58,26 @@ body {
     color: #282828;
 }
 
+a img-big img {
+    width: 200%;
+    height: 200%;
+    margin-left: -50%; /* line added */
+    margin-top: -50%; /* line added */
+    position: absolute;
+    opacity: 1;
+    z-index: 1;
+    -moz-box-shadow: 0 0 15px 2px #000;
+    -webkit-box-shadow: 0 0 15px 2px #000;
+    box-shadow: 0 0 15px 2px #000;
+    -webkit-transition-duration: 1s;
+    -webkit-transition-delay: 0.3s;
+    -moz-transition-duration: 2s;
+    -moz-transition-delay: 0.3s;
+    -o-transition-duration: 2s;
+    -o-transition-delay: 0.3s;
+    cursor: default;
+}
+
 a, button, input {
     outline: medium none !important;
     -webkit-transition: all 0.5s ease-out 0s;
@@ -1412,6 +1432,23 @@ button.button-small {
 
     .portfolio-item .item-hover .item-inner {
         overflow: hidden;
+        width: 200%;
+        height: 200%;
+        margin-left: -50%; /* line added */
+        margin-top: -50%; /* line added */
+        position: absolute;
+        opacity: 1;
+        z-index: 1;
+        -moz-box-shadow: 0 0 15px 2px #000;
+        -webkit-box-shadow: 0 0 15px 2px #000;
+        box-shadow: 0 0 15px 2px #000;
+        -webkit-transition-duration: 1s;
+        -webkit-transition-delay: 0.3s;
+        -moz-transition-duration: 2s;
+        -moz-transition-delay: 0.3s;
+        -o-transition-duration: 2s;
+        -o-transition-delay: 0.3s;
+        cursor: default;
     }
 
     .portfolio-item .item-hover img {
@@ -2105,13 +2142,6 @@ textarea {
         box-shadow: 0 0 17px 0 #ebebeb;
         outline: none !important;
     }
-
-a:focus img{
-    margin-top: 150px;
-    margin-left: 250px;
-    width: 300px;
-    height: auto;
-}
 
 .contact-form {
     position: relative;
