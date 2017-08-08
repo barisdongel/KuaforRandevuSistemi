@@ -3,15 +3,7 @@
 @{
     ViewBag.Title = "Create";
     Layout = "~/Views/Shared/_Layout.cshtml";
-    Layout = null;
-
-    var Liste = (from i in db.Ogrencilers
-                 orderby i.ID descending
-                 select i).ToList();
-} 
-@{
-    // Değer ataması yapılacak 
-} 
+}
 <title>RANDEVU AL</title>
 
 <div class="menu-responsive"><a href="#"> <b>sam martin</b></a> <a id="menu-icon" class="but" href="#"><span class="ti-menu"></span> </a></div>
@@ -52,7 +44,7 @@
     $(function () {
         $('#datetimepicker').datetimepicker({
             format: 'DD/MM/YYYY',
-            minDate: moment()
+            minDate: moment().add('d', 1).toDate()
         });
     });
 </script>
