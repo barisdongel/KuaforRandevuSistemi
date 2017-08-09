@@ -207,6 +207,7 @@
     <Compile Include="Models\TBLRANDEVUSAAT.cs" />
     <Compile Include="Models\TBLUYE.cs" />
     <Compile Include="Models\TBLYETKI.cs" />
+    <Compile Include="Models\UyeRandevuListViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -39,5 +39,13 @@ namespace WebApplication2.Controllers
             ViewBag.RANDEVUSAATID = new SelectList(db.TBLRANDEVUSAAT, "RANDEVUSAATID", "RANDEVUSAATLERI", tBLRANDEVU.RANDEVUSAATID);
             return View(tBLRANDEVU);
         }
+
+        public ActionResult Randevularım()
+        {
+            var uyeid = int.Parse(Session["uyeid"].ToString());
+            var model = new UyeRandevuListViewModel();
+            model.Randevular = db.TBLRANDEVU.Where(r => r.ALANUYEID == uyeid).ToList();
+            return View(model);
+        }
     }
 }
