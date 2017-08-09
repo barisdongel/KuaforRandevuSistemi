@@ -16,8 +16,7 @@
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul id="navbar" class="nav navbar-nav">
                 <li class="active"><a href="#home" class="page-scroll">RANDEVU AL</a></li>
-                <li><a href="../Uye/Login">GİRİŞ YAP</a></li>
-                <li><a @Html.ActionLink("RANDEVULARIM", "../RandevuGor/Index")</a></li>
+                <li><a>@Html.ActionLink("Randevularım", "UyeRandevu", new { ID=2})</a></li>
                 <li><a>@Html.ActionLink("ANASAYFAYA DÖN", "../Home/HomePage")</a></li>
             </ul>
         </div>
@@ -44,7 +43,7 @@
     $(function () {
         $('#datetimepicker').datetimepicker({
             format: 'DD/MM/YYYY',
-            minDate: moment().add('d', 1).toDate()
+            minDate: moment().add(1, 'd').toDate()
         });
     });
 </script>

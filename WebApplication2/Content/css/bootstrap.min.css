@@ -7334,7 +7334,9 @@ button, select {
 
 button, html input[type=button], input[type=reset], input[type=submit] {
     -webkit-appearance: button;
-    cursor: pointer
+    cursor: pointer;
+    margin-top: 20px;
+    background: #bea165;
 }
 
     button[disabled], html input[disabled] {
@@ -8546,7 +8548,7 @@ td, th {
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-    box-sizing: border-box
+    box-sizing: border-box;
 }
 
 :after, :before {
@@ -8629,7 +8631,6 @@ hr {
     margin-top: 20px;
     margin-bottom: 20px;
     border: 0;
-    border-top: 1px solid #eee
 }
 
 .sr-only {
@@ -10552,8 +10553,9 @@ select[multiple].input-lg, textarea.input-lg {
 }
 
 .form-horizontal .form-group {
-    margin-right: -15px;
-    margin-left: -15px
+    margin-right: 0;
+    margin-left: 0;
+    margin-top: 50px;
 }
 
 @media (min-width:768px) {
@@ -10634,9 +10636,11 @@ a.btn.disabled, fieldset[disabled] a.btn {
 }
 
 .btn-default {
-    color: #333;
+    color: #fff;
+    font-size: 13pt;
+    font-weight: bold;
     background-color: #fff;
-    border-color: #ccc
+    border-color: #ccc;
 }
 
     .btn-default.focus, .btn-default:focus {

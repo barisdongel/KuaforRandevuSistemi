@@ -1,8 +1,14 @@
 ﻿@{
-    if (Session["yetkiid"] == null && Convert.ToInt32(Session["yetkiid"]) != 1)
+    if (Convert.ToInt32(Session["yetkiid"]) == 1)
+    {
+        @Url.Action("AdminPage", "Admin")
+    }
+
+    else
     {
         Response.Redirect("~/Home/HomePage");
     }
+
 } 
 <link href="~/Content/css/bootstrap-datetimepicker.css" rel="stylesheet">
 

@@ -14,8 +14,8 @@ namespace WebApplication2.Controllers
     {
         private ModelKuafor db = new ModelKuafor();
 
-
         // GET: UyeRandevu/Create
+
         public ActionResult Create()
         {
             ViewBag.KUAFORID = new SelectList(db.TBLKUAFOR, "KUAFORID", "KUAFORAD");

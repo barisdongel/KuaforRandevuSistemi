@@ -17,7 +17,6 @@ namespace WebApplication2.Controllers
             return View();
         }
 
-
         public ActionResult Logout()
         {
             Session["admin"] = null;

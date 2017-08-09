@@ -196,7 +196,6 @@
     <Compile Include="Controllers\AdminUyeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KayıtController.cs" />
-    <Compile Include="Controllers\RandevuGorController.cs" />
     <Compile Include="Controllers\UyeController.cs" />
     <Compile Include="Controllers\UyeRandevuController.cs" />
     <Compile Include="Global.asax.cs">
@@ -236,7 +235,7 @@
     <Content Include="Views\AdminRandevu\Details.cshtml" />
     <Content Include="Views\AdminRandevu\Edit.cshtml" />
     <Content Include="Views\AdminRandevu\Index.cshtml" />
-    <Content Include="Views\RandevuGor\Index.cshtml" />
+    <Content Include="Views\UyeRandevu\Randevularım.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
