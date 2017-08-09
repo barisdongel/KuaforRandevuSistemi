@@ -207,7 +207,6 @@
     <Compile Include="Models\TBLRANDEVUSAAT.cs" />
     <Compile Include="Models\TBLUYE.cs" />
     <Compile Include="Models\TBLYETKI.cs" />
-    <Compile Include="Models\UyeRandevuListViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -236,7 +235,7 @@
     <Content Include="Views\AdminRandevu\Details.cshtml" />
     <Content Include="Views\AdminRandevu\Edit.cshtml" />
     <Content Include="Views\AdminRandevu\Index.cshtml" />
-    <Content Include="Views\UyeRandevu\Randevularım.cshtml" />
+    <Content Include="Views\UyeRandevu\Randevular.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -1,0 +1,77 @@
+﻿@model IEnumerable<WebApplication2.Models.TBLRANDEVU>
+
+@{
+    ViewBag.Title = "Randevular";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<title>RANDEVULARIM</title>
+
+<div class="menu-responsive"><a href="#"> <b>sam martin</b></a> <a id="menu-icon" class="but" href="#"><span class="ti-menu"></span> </a></div>
+<header id="left-header" class="header">
+    <nav id="menu" class="navbar navbar-default">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#"> <img id="logo_imgg" src="../images/logo.png" alt=""> </a>
+        </div>
+
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul id="navbar" class="nav navbar-nav">
+                <li>@Html.ActionLink("RANDEVU AL", "Create")</li>
+                <li class="active"><a href="@Url.Action("Randevular", "UyeRandevu")">RANDEVULARIM</a></li>
+                <li>@Html.ActionLink("ANASAYFAYA DÖN", "../Home/HomePage")</li>
+            </ul>
+        </div>
+    </nav>
+    <div class="menu-footer">
+        <div class="social">
+            <ul>
+                <li><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="https://twitter.com/"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="https://tr.linkedin.com/"><i class="fa fa-linkedin"></i> </a></li>
+            </ul>
+        </div>
+        <div class="copyright">
+            <p>© BAR-BER </p>
+        </div>
+    </div>
+</header>
+
+<center><h2 style="color:black; padding-left:210px;">RANDEVULARIM</h2></center>
+
+<p>
+    @Html.ActionLink("RANDEVU AL", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TBLKUAFOR.KUAFORAD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TBLRANDEVUSAAT.RANDEVUSAATLERI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TBLUYE.AD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RANDEVUTARIH)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TBLKUAFOR.KUAFORAD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TBLRANDEVUSAAT.RANDEVUSAATLERI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TBLUYE.AD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RANDEVUTARIH)
+        </td>
+    </tr>
+}
+
+</table>

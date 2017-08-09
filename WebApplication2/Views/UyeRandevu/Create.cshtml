@@ -15,9 +15,9 @@
 
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul id="navbar" class="nav navbar-nav">
-                <li class="active"><a href="#home" class="page-scroll">RANDEVU AL</a></li>
-                <li><a href="@Url.Action("Randevularım", "UyeRandevu")">RANDEVULARIM</a></li>
-                <li><a>@Html.ActionLink("ANASAYFAYA DÖN", "../Home/HomePage")</a></li>
+                <li class="active">@Html.ActionLink("RANDEVU AL", "Create")</li>
+                <li><a href="@Url.Action("Randevular", "UyeRandevu")">RANDEVULARIM</a></li>
+                <li>@Html.ActionLink("ANASAYFAYA DÖN", "../Home/HomePage")</li>
             </ul>
         </div>
     </nav>

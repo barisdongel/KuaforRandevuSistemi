@@ -14,6 +14,12 @@ namespace WebApplication2.Controllers
     {
         private ModelKuafor db = new ModelKuafor();
 
+        public ActionResult Randevular()
+        {
+            var tBLRANDEVU = db.TBLRANDEVU.Include(t => t.TBLKUAFOR).Include(t => t.TBLRANDEVUSAAT).Include(t => t.TBLUYE);
+            return View(tBLRANDEVU.ToList());
+        }
+
         // GET: UyeRandevu/Create
 
         public ActionResult Create()
@@ -38,14 +44,6 @@ namespace WebApplication2.Controllers
             ViewBag.KUAFORID = new SelectList(db.TBLKUAFOR, "KUAFORID", "KUAFORAD", tBLRANDEVU.KUAFORID);
             ViewBag.RANDEVUSAATID = new SelectList(db.TBLRANDEVUSAAT, "RANDEVUSAATID", "RANDEVUSAATLERI", tBLRANDEVU.RANDEVUSAATID);
             return View(tBLRANDEVU);
-        }
-
-        public ActionResult Randevularım()
-        {
-            var uyeid = int.Parse(Session["uyeid"].ToString());
-            var model = new UyeRandevuListViewModel();
-            model.Randevular = db.TBLRANDEVU.Where(r => r.ALANUYEID == uyeid).ToList();
-            return View(model);
         }
     }
 }
