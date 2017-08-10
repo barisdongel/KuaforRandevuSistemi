@@ -201,7 +201,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\ModelKuafor.cs" />
+    <Compile Include="Models\KuaforDB.cs" />
     <Compile Include="Models\TBLKUAFOR.cs" />
     <Compile Include="Models\TBLRANDEVU.cs" />
     <Compile Include="Models\TBLRANDEVUSAAT.cs" />

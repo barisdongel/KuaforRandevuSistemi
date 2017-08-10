@@ -12,7 +12,7 @@ namespace WebApplication2.Controllers
 {
     public class UyeRandevuController : Controller
     {
-        private ModelKuafor db = new ModelKuafor();
+        private KuaforDB db = new KuaforDB();
 
         public ActionResult Randevular()
         {

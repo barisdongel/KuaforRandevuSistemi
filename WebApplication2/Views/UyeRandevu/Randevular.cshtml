@@ -16,7 +16,7 @@
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul id="navbar" class="nav navbar-nav">
                 <li>@Html.ActionLink("RANDEVU AL", "Create")</li>
-                <li class="active"><a href="@Url.Action("Randevular", "UyeRandevu")">RANDEVULARIM</a></li>
+                <li class="active">@Html.ActionLink("RANDEVULARIM", "../UyeRandevu/Randevular")</li>
                 <li>@Html.ActionLink("ANASAYFAYA DÖN", "../Home/HomePage")</li>
             </ul>
         </div>
@@ -75,3 +75,8 @@
 }
 
 </table>
+<div class="form-group">
+    <div class="col-md-offset-2 col-md-10">
+        <a href="../Home/HomePage"><input type="submit" value="ANASAYFAYA DÖN" class="btn btn-default" /></a>
+    </div>
+</div>

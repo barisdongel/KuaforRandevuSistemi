@@ -5,10 +5,10 @@ namespace WebApplication2.Models
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
 
-    public partial class ModelKuafor : DbContext
+    public partial class KuaforDB : DbContext
     {
-        public ModelKuafor()
-            : base("name=ModelKuaforDB")
+        public KuaforDB()
+            : base("name=KuaforDB")
         {
         }
 

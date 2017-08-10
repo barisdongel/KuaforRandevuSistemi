@@ -12,7 +12,7 @@ namespace WebApplication2.Controllers
 {
     public class AdminUyeController : Controller
     {
-        ModelKuafor db = new ModelKuafor();
+        KuaforDB db = new KuaforDB();
 
         // GET: AdminUye
         public ActionResult Index()

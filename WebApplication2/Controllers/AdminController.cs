@@ -10,7 +10,7 @@ namespace WebApplication2.Controllers
     public class AdminController : Controller
     {
         // GET: Admin
-        ModelKuafor db = new ModelKuafor();
+        KuaforDB db = new KuaforDB();
 
         public ActionResult AdminPage()
         {

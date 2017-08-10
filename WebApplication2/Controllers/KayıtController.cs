@@ -10,7 +10,7 @@ namespace WebApplication2.Controllers
     public class KayıtController : Controller
     {
         // GET: Kayıt
-        ModelKuafor db = new ModelKuafor();
+        KuaforDB db = new KuaforDB();
         public ActionResult Index()
         {
             return View();

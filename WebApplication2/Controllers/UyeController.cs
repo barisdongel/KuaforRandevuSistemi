@@ -14,7 +14,7 @@ namespace WebApplication2.Controllers
     {
 
         // GET: Uye
-        ModelKuafor db = new ModelKuafor();
+        KuaforDB db = new KuaforDB();
 
         public ActionResult Login()
         {
