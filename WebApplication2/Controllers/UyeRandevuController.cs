@@ -16,7 +16,10 @@ namespace WebApplication2.Controllers
 
         public ActionResult Randevular()
         {
-            var tBLRANDEVU = db.TBLRANDEVU.Include(t => t.TBLKUAFOR).Include(t => t.TBLRANDEVUSAAT).Include(t => t.TBLUYE);
+            var id = int.Parse(Session["uyeid"].ToString());
+
+            var tBLRANDEVU = db.TBLRANDEVU.Include(t => t.TBLKUAFOR).Include(t => t.TBLRANDEVUSAAT).Include(t => t.TBLUYE).Where(u => u.ALANUYEID == id);
+
             return View(tBLRANDEVU.ToList());
         }
 
