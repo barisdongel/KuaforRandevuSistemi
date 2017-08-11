@@ -38,10 +38,18 @@ namespace WebApplication2.Controllers
         {
             if (ModelState.IsValid)
             {
-                tBLRANDEVU.ALANUYEID = int.Parse(Session["uyeid"].ToString());
-                db.TBLRANDEVU.Add(tBLRANDEVU);
-                db.SaveChanges();
-                return Content("<script> alert('RANDEVU TALEBİNİZ ALINDI '); window.location = '../Home/HomePage'; </script>");
+                var randevukontrol = db.TBLRANDEVU.Where(u => u.RANDEVUTARIH == tBLRANDEVU.RANDEVUTARIH && u.RANDEVUSAATID == tBLRANDEVU.RANDEVUSAATID && u.KUAFORID == tBLRANDEVU.KUAFORID).FirstOrDefault();
+                if (randevukontrol != null)
+                {
+                    return Content("<script> alert('RANDEVU DOLU !'); window.location = '../UyeRandevu/Create'; </script>");
+                }
+                else
+                {
+                    tBLRANDEVU.ALANUYEID = int.Parse(Session["uyeid"].ToString());
+                    db.TBLRANDEVU.Add(tBLRANDEVU);
+                    db.SaveChanges();
+                    return Content("<script> alert('RANDEVU TALEBİNİZ ALINDI '); window.location = '../Home/HomePage'; </script>");
+                }
             }
 
             ViewBag.KUAFORID = new SelectList(db.TBLKUAFOR, "KUAFORID", "KUAFORAD", tBLRANDEVU.KUAFORID);

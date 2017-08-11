@@ -1,0 +1,77 @@
+[33mcommit b948e8aeb3055013c402925edc2e83489f1822c8[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Barış Döngel <barisdng26@gmail.com>
+Date:   Fri Aug 11 14:37:15 2017 +0300
+
+    kullanıcı randevularını görebiliyor
+
+[33mcommit 78072bfad1842b284e659f635234c2ebfc288756[m
+Author: Barış Döngel <barisdng26@gmail.com>
+Date:   Thu Aug 10 13:09:18 2017 +0300
+
+    yeni model eklendi
+
+[33mcommit 251c23dabcef1258bdee2f65638c0c313d4e50c0[m
+Author: Barış Döngel <barisdng26@gmail.com>
+Date:   Wed Aug 9 17:28:41 2017 +0300
+
+    bazı eksikler giderildi ve uyerandevu gor kısmı tekrar düzenlenildi
+
+[33mcommit 46894a53c6933dc6b44f9e0d2c291a49add3b2b7[m
+Author: Barış Döngel <barisdng26@gmail.com>
+Date:   Wed Aug 9 14:40:32 2017 +0300
+
+    uye randevuları listeleyebiliyo
+
+[33mcommit d881cbdd4a0f29fc6c069b076fa67c151d9d5732[m
+Author: Barış Döngel <barisdng26@gmail.com>
+Date:   Wed Aug 9 14:00:19 2017 +0300
+
+    Login olan uyenin admin panele erişim açığı kapatıldı
+
+[33mcommit a176ad24e863af29001165ee12607c870c41b27b[m
+Author: Barış Döngel <barisdng26@gmail.com>
+Date:   Tue Aug 8 17:12:14 2017 +0300
+
+    eski veritabanı kayıtları web config den silindi ve admin layoutunda ki çekilemeyen link css ler kaldırıldı
+
+[33mcommit 6c157a0249f4a0833db5fffea3302c1e32cf7c36[m
+Author: Barış Döngel <barisdng26@gmail.com>
+Date:   Tue Aug 8 13:27:54 2017 +0300
+
+    minumum başlangııç tarihi olarak yarın eklendi
+
+[33mcommit fa5d7fb71d0d868d6f10b91085f305ff5ca77f1c[m
+Author: Barış Döngel <barisdng26@gmail.com>
+Date:   Mon Aug 7 17:08:14 2017 +0300
+
+    albüm kısmında ki resimlere lightbox eklendi
+
+[33mcommit 86dc49a4c87d3ace1dce34912b262f0d240a997d[m
+Author: Barış Döngel <barisdng26@gmail.com>
+Date:   Mon Aug 7 15:48:10 2017 +0300
+
+    add jquery
+
+[33mcommit b2300c92251c40a25becdf658b6d1243240b231e[m
+Author: Barış Ömer Döngel <barisdng26@gmail.com>
+Date:   Mon Aug 7 15:14:34 2017 +0300
+
+    added space
+
+[33mcommit 028ac0480ebd3a917b326a94f0c0c3c629fef548[m
+Author: Barış Döngel <barisdng26@gmail.com>
+Date:   Mon Aug 7 15:12:36 2017 +0300
+
+    doctype eklendi
+
+[33mcommit 993a8760755fab46503ddc42d80f701cda1e91d9[m
+Author: Barış Döngel <barisdng26@gmail.com>
+Date:   Mon Aug 7 15:07:03 2017 +0300
+
+    initial commit
+
+[33mcommit 20bc291175b9c6ff728eaf966c28bc326e5a3b85[m
+Author: Barış Ömer Döngel <barisdng26@gmail.com>
+Date:   Mon Aug 7 15:00:29 2017 +0300
+
+    Initial commit
