@@ -48,13 +48,48 @@ namespace WebApplication2.Controllers
                     tBLRANDEVU.ALANUYEID = int.Parse(Session["uyeid"].ToString());
                     db.TBLRANDEVU.Add(tBLRANDEVU);
                     db.SaveChanges();
-                    return Content("<script> alert('RANDEVU TALEBİNİZ ALINDI '); window.location = '../Home/HomePage'; </script>");
+                    return Content("<script> alert('RANDEVU TALEBİNİZ ALINDI '); window.location = '../UyeRandevu/Create'; </script>");
                 }
             }
 
             ViewBag.KUAFORID = new SelectList(db.TBLKUAFOR, "KUAFORID", "KUAFORAD", tBLRANDEVU.KUAFORID);
             ViewBag.RANDEVUSAATID = new SelectList(db.TBLRANDEVUSAAT, "RANDEVUSAATID", "RANDEVUSAATLERI", tBLRANDEVU.RANDEVUSAATID);
             return View(tBLRANDEVU);
+        }
+
+        // GET: UyeRandevu/Delete/5
+        public ActionResult Delete(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            TBLRANDEVU tBLRANDEVU = db.TBLRANDEVU.Find(id);
+            if (tBLRANDEVU == null)
+            {
+                return HttpNotFound();
+            }
+            return View(tBLRANDEVU);
+        }
+
+        // POST: AdminRandevu/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteConfirmed(int id)
+        {
+            TBLRANDEVU tBLRANDEVU = db.TBLRANDEVU.Find(id);
+            db.TBLRANDEVU.Remove(tBLRANDEVU);
+            db.SaveChanges();
+            return RedirectToAction("Randevular");
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                db.Dispose();
+            }
+            base.Dispose(disposing);
         }
     }
 }

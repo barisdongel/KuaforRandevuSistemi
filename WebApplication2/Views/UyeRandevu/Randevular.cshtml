@@ -71,6 +71,9 @@
         <td>
             @Html.DisplayFor(modelItem => item.RANDEVUTARIH)
         </td>
+        <td>
+            @Html.ActionLink("İPTAL ET", "Delete", new { id = item.RANDEVUID })
+        </td>
     </tr>
 }
 

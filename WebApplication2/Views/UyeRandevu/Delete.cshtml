@@ -1,0 +1,57 @@
+﻿@model WebApplication2.Models.TBLRANDEVU
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<title>RANDEVU SİL</title>
+
+<center><h2 style="color:black; padding-left:210px;">RANDEVUYU İPTAL ET</h2></center>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TBLKUAFOR.KUAFORAD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TBLKUAFOR.KUAFORAD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TBLRANDEVUSAAT.RANDEVUSAATLERI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TBLRANDEVUSAAT.RANDEVUSAATLERI)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TBLUYE.AD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TBLUYE.AD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RANDEVUTARIH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RANDEVUTARIH)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="İPTAL ET" class="btn btn-default" /> |
+            @Html.ActionLink("GERİ DÖN", "Randevular")
+        </div>
+    }
+</div>
