@@ -72,7 +72,7 @@ namespace WebApplication2.Controllers
             return View(tBLRANDEVU);
         }
 
-        // POST: AdminRandevu/Delete/5
+        // POST: UyeRandevu/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)

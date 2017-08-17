@@ -15,8 +15,8 @@
 
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul id="navbar" class="nav navbar-nav">
-                <li>@Html.ActionLink("RANDEVU AL", "Create")</li>
                 <li class="active">@Html.ActionLink("RANDEVULARIM", "../UyeRandevu/Randevular")</li>
+                <li>@Html.ActionLink("RANDEVU AL", "Create")</li>
                 <li>@Html.ActionLink("ANASAYFAYA DÖN", "../Home/HomePage")</li>
             </ul>
         </div>
@@ -40,7 +40,7 @@
 <p>
     @Html.ActionLink("RANDEVU AL", "Create")
 </p>
-<table class="table">
+<table class="table tblset">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.TBLKUAFOR.KUAFORAD)

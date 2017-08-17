@@ -40,7 +40,7 @@ namespace WebApplication2.Controllers
                     else
                     {
 
-                        return RedirectToAction("Create", "UyeRandevu");
+                        return RedirectToAction("Randevular", "UyeRandevu");
                     }
 
                 }
